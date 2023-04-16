@@ -15,5 +15,10 @@ pipeline {
          bat 'mvn clean compile'
       }
     }
+     stage('Integration Test') {
+      steps{
+         bat 'mvn verify -DskiUnitTests'
+      }
+    }
   }
 }
