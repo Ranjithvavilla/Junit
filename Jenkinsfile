@@ -1,8 +1,10 @@
 pipeline {
   agent any
   stages {
-    steps('Git Check out') {
-      git branch: 'main', url: 'https://github.com/Ranjithvavilla/Junit.git'
+    stage('Git Check out') {
+      steps{
+         git branch: 'main', url: 'https://github.com/Ranjithvavilla/Junit.git'
+      }
     }
   }
 }
