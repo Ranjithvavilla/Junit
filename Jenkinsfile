@@ -1,5 +1,9 @@
 pipeline {
   agent any
+   tools {
+        maven "M2_HOME"
+        jdk "JDK"
+    }
   stages {
     stage('Git Check out') {
       steps{
