@@ -6,5 +6,10 @@ pipeline {
          git branch: 'main', url: 'https://github.com/Ranjithvavilla/Junit.git'
       }
     }
+    stage('UNIT testing') {
+      steps{
+         sh 'mvn test'
+      }
+    }
   }
 }
